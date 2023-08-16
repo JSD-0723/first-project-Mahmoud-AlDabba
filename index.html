@@ -27,19 +27,28 @@
   </head>
   <body>
     <nav>
-      <h4>Web Topics</h4>
-      <div class="nav-buttons">
-        <button class="btn">
-          <ion-icon name="moon-outline"></ion-icon> Dark Mode
-        </button>
-        <button class="btn">
-          <ion-icon name="heart-outline"></ion-icon>favorites
-        </button>
+      <div class="nav-container">
+        <h4>Web Topics</h4>
+        <div class="nav-buttons">
+          <button class="btn dark-mode">
+            <ion-icon name="moon-outline"></ion-icon> Dark Mode
+          </button>
+          <button class="btn fav">
+            <ion-icon name="heart-outline"></ion-icon>favorites
+          </button>
+        </div>
       </div>
     </nav>
+
+    <div class="triangle">
+      <div class="st-triangle"></div>
+      <div class="nd-triangle"></div>
+    </div>
     <div class="welcome-content">
       <h3>Welcome to our website!</h3>
-      <p>we have a new design that's fresh, modern, and easy to use.</p>
+      <p class="welcome-p">
+        we have a new design that's fresh, modern, and easy to use.
+      </p>
     </div>
     <main class="content-body">
       <div class="content-container">
@@ -51,7 +60,7 @@
           <div class="menu-list">
             <div class="sort">
               <label for="sort">Sort by</label>
-              <select name="sort" id="sort">
+              <select class="select" name="sort" id="sort">
                 <option value="javascript">Default</option>
                 <option value="python">Python</option>
                 <option value="c++">C++</option>
@@ -60,7 +69,7 @@
             </div>
             <div class="filter">
               <label for="filter">Filter by</label>
-              <select name="filter" id="filter">
+              <select class="select" name="filter" id="filter">
                 <option value="javascript">Default</option>
                 <option value="python">Python</option>
                 <option value="c++">C++</option>
@@ -69,7 +78,7 @@
             </div>
           </div>
         </div>
-        <h3>'24' Web Topics Found</h3>
+        <h3 class="no-topic">'24' Web Topics Found</h3>
         <div class="cards">
           <div class="card">
             <img src="./Logos/angular.png" alt="angular" />
@@ -191,9 +200,46 @@
               <p class="card-author">Author:Jessica Davies</p>
             </div>
           </div>
+        </div>
+      </div>
+      <div class="fav-container">
+        <div class="fav-content">
+
+          <h3 class="fav-header">MY favorite Topics</h3>
+          <div class="fav-cards">
+            <div class="fav-card">
+              <img src="./Logos/react.webp" alt="react">
+              <div class="card-text">
+                <p>React</p>
+                <div class="star">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+             
+            </div>
+            <div class="fav-card">
+              <img src="./Logos/react.webp" alt="react">
+              <div class="card-text">
+                <p>React</p>
+                <div class="star">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+             
+            </div>
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
   </body>
 </html>

@@ -2,10 +2,11 @@
   box-sizing: border-box;
 }
 
-nav {
+.nav-container {
+  width: 90%;
   display: flex;
   align-items: center;
-  width: 90%;
+  padding: 20px;
   margin: auto;
 }
 
@@ -17,7 +18,22 @@ nav h4 {
 .nav-buttons {
   display: flex;
 }
-
+.triangle {
+  display: flex;
+  height: 100px;
+}
+.st-triangle {
+  background-color: var(--brand-primary);
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(100% 0%, 0% 0%, 0% 100%);
+}
+.nd-triangle {
+  background-color: var(--brand-secondary);
+  height: 100%;
+  width: 100%;
+  clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
+}
 .btn {
   background-color: var(--bg_default);
   border-radius: 5px;
@@ -140,6 +156,40 @@ nav h4 {
   color: orange;
 }
 
+.fav-container {
+  background-color: var(--bg_default);
+  height: 200px;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: none;
+}
+
+.fav-content {
+  width: 90%;
+  margin: auto;
+}
+.fav-cards {
+  display: flex;
+}
+.fav-card {
+  width: 130px;
+  height: 130px;
+  border-radius: 5px;
+  margin-right: 10px;
+  box-shadow: -2px -1px 15px 2px rgba(0, 0, 0, 0.48);
+  -webkit-box-shadow: -2px -1px 15px 2px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: -2px -1px 15px 2px rgba(0, 0, 0, 0.48);
+}
+.fav-card img {
+  width: 100%;
+  height: 70px;
+}
+.fav-card p {
+ font-size: 15px;
+ margin: 0;
+ font-weight: 700;
+}
 @media (max-width: 768px) {
   .search-box {
     display: flex;
