@@ -36,6 +36,7 @@ nav h4 {
 .triangle {
   display: flex;
   height: 100px;
+  background: var(--bg_default);
 }
 .st-triangle {
   background-color: var(--brand-primary);
@@ -66,6 +67,7 @@ nav h4 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: var(--bg_default);
 }
 .welcome-content h3 {
   color: var(--brand-secondary);
