@@ -2,6 +2,21 @@
   box-sizing: border-box;
 }
 
+h1,
+h3,
+h4,
+p,
+button,
+select,
+input,
+label {
+  color: var(--body-text);
+}
+nav,
+select,
+input {
+  background: var(--bg_default);
+}
 .nav-container {
   width: 90%;
   display: flex;
@@ -12,7 +27,7 @@
 
 nav h4 {
   margin-right: auto;
-  color: var(--brand-primary);
+  color: var(--brand-primary) !important;
   cursor: pointer;
 }
 .nav-buttons {
@@ -186,9 +201,9 @@ nav h4 {
   height: 70px;
 }
 .fav-card p {
- font-size: 15px;
- margin: 0;
- font-weight: 700;
+  font-size: 15px;
+  margin: 0;
+  font-weight: 700;
 }
 @media (max-width: 768px) {
   .search-box {
