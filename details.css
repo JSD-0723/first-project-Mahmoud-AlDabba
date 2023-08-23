@@ -97,7 +97,7 @@
   color: var(--brand-secondary);
 }
 
-@media (max-width: 768px) {
+@media (max-width: 912px) {
   .details-content {
     display: flex;
     flex-direction: column;
@@ -112,8 +112,11 @@
     padding: 15px;
   }
   .details-info,
-  .topics-box,
-  .course-card {
+  .course-card,
+  .topics-container {
     width: 80%;
+  }
+  .topics-box {
+    width: 100%;
   }
 }
