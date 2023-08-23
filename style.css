@@ -207,6 +207,7 @@ header h4 {
   position: fixed;
   bottom: 0;
   display: none;
+  z-index: 2;
 }
 
 .fav-content {
