@@ -1,0 +1,119 @@
+.details-container {
+  background: #333333;
+  padding: 30px 0;
+}
+
+.details-content,
+.topics-container {
+  width: 70%;
+  margin-inline: auto;
+  position: relative;
+  margin-inline: auto;
+}
+.details-info,
+.topics-box {
+  width: 60%;
+  padding-right: 10px;
+}
+.details-content-title,
+.details-content-header,
+.details-content-para {
+  color: #ffffff;
+}
+.details-content-para {
+  margin-top: 15px;
+  line-height: 2;
+}
+.course-card {
+  background-color: #ffffff;
+  height: 450px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 30%;
+  z-index: 1;
+  box-shadow: var(--box-shadow);
+}
+.course-card-img {
+  width: 100%;
+  height: 50%;
+}
+.course-card-content {
+  padding: 15px;
+  height: 50%;
+}
+.course-card-title,
+.course-card-content-info-title,
+.course-card-content-info-Unlimited {
+  color: black;
+}
+.course-card-title span {
+  font-weight: bold;
+}
+.course-card-content-info {
+  border: 1px solid #dddddd;
+  padding: 15px;
+  margin-top: 10px;
+}
+.course-card-content-info-btn {
+  color: #ffffff;
+  background-color: var(--brand-secondary);
+  height: 50px;
+  width: 100%;
+  border: none;
+  margin-block: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.course-card-content-info-icon {
+  margin-left: 5px;
+}
+.course-card-content-info-Unlimited {
+  text-align: center;
+  font-size: 13px;
+  opacity: 0.5;
+}
+
+.course-topics {
+  background-color: var(--bg_body);
+  padding-top: 30px;
+  border-radius: 5px;
+  color: var(--body-text);
+  padding: 30px 0;
+}
+.topics-box {
+  background-color: var(--bg_default);
+  list-style: none;
+  border: 1px solid var(--lines-color);
+  color: var(--body-text);
+  box-shadow: var(--box-shadow);
+}
+.topics-box li {
+  border-bottom: 1px solid var(--lines-color);
+  padding: 15px 20px;
+}
+.topics--icon {
+  color: var(--brand-secondary);
+}
+
+@media (max-width: 768px) {
+  .details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .course-card {
+    position: static;
+    margin-top: 20px;
+  }
+  .welcome-text {
+    padding: 15px;
+  }
+  .details-info,
+  .topics-box,
+  .course-card {
+    width: 80%;
+  }
+}

@@ -8,6 +8,8 @@
   --lines-color: #dddddd;
   --body-text: #333333;
   --heart-color: #dc143c;
+  --box-shadow: 0px 0px 8px -4px rgba(0,0,0,0.8);
+ 
   font-family: 'Nunito Sans';
 }
 

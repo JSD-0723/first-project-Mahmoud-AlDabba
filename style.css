@@ -1,5 +1,7 @@
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 h1,
@@ -12,20 +14,23 @@ input,
 label {
   color: var(--body-text);
 }
-nav,
+header,
 select,
 input {
   background: var(--bg_default);
 }
+a {
+  text-decoration: none;
+}
 .nav-container {
-  width: 90%;
+  width: 95%;
   display: flex;
   align-items: center;
-  padding: 20px;
   margin: auto;
+  min-height: 70px;
 }
 
-nav h4 {
+header h4 {
   margin-right: auto;
   color: var(--brand-primary) !important;
   cursor: pointer;
@@ -33,8 +38,27 @@ nav h4 {
 .nav-buttons {
   display: flex;
 }
+
+.nav-icon {
+  margin-right: 5px;
+}
+.btn {
+  background-color: var(--bg_default);
+  border-radius: 5px;
+  border: 1px solid var(--lines-color);
+  font-family: var(--font-family);
+  cursor: pointer;
+  width: 100px;
+  align-items: center;
+  margin-right: 5px;
+  width: 117px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+}
 .triangle {
   display: flex;
+  width: 100%;
   height: 100px;
   background: var(--bg_default);
 }
@@ -50,33 +74,25 @@ nav h4 {
   width: 100%;
   clip-path: polygon(100% 0%, 0% 0%, 100% 100%);
 }
-.btn {
-  background-color: var(--bg_default);
-  border-radius: 5px;
-  border: 1px solid var(--lines-color);
-  font-family: var(--font-family);
-  cursor: pointer;
-  width: 100px;
-  align-items: center;
-  display: flex;
-  margin-right: 5px;
-}
 
 .welcome-content {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background: var(--bg_default);
+  padding-bottom: 15px;
 }
-.welcome-content h3 {
+.welcome-text {
+  /* margin: auto;
+  width: 70%; */
+  text-align: left;
+}
+.welcome-text h3 {
   color: var(--brand-secondary);
-  margin-bottom: 0;
 }
 .welcome-content p {
   margin-top: 0;
   padding-left: 5px;
-  text-align: center;
 }
 
 .content-body {
@@ -85,15 +101,21 @@ nav h4 {
 }
 
 .content-container {
-  width: 90%;
+  width: 95%;
   margin: auto;
 }
 .search-box {
   display: flex;
   align-items: center;
   border-radius: 5px;
+
   border: 1px solid var(--lines-color);
   background-color: var(--bg_default);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+}
+.search-icon{
+  color: var(--body-text);
+  margin-right: 8px;
 }
 .search {
   width: 100%;
@@ -103,49 +125,54 @@ nav h4 {
   align-items: center;
 }
 .search input {
-  width: 90%;
+  width: 100%;
   border: none;
   outline: none;
+  height: 50px;
 }
 .menu-list {
   display: flex;
-  width: 100%;
+  width: 50%;
+  font-size: 0.8rem;
+}
+.menu-list label {
+  width: 60px;
+  text-align: center;
 }
 .sort {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 10px;
   border: 1px solid var(--lines-color);
-  width: 50%;
+  width: 100%;
 }
 .filter {
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding: 10px;
   border: 1px solid var(--lines-color);
-  width: 50%;
+  width: 100%;
 }
 
-#sort {
+.select {
   border: none;
+  font-size: 0.8rem;
+  width: 60px;
 }
-#filter {
-  border: none;
+.no-topic {
+  padding: 24px 0 36px;
 }
-
 .cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
 }
 
 .card {
-  width: 300px;
   background-color: var(--bg_default);
   border-radius: 10px;
   margin-bottom: 20px;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .card img {
   width: 100%;
@@ -184,7 +211,10 @@ nav h4 {
 
 .fav-content {
   width: 90%;
-  margin: auto;
+  margin: 15px auto;
+}
+.fav-header {
+  margin-bottom: 15px;
 }
 .fav-cards {
   display: flex;
@@ -194,13 +224,12 @@ nav h4 {
   height: 130px;
   border-radius: 5px;
   margin-right: 10px;
-  box-shadow: -2px -1px 15px 2px rgba(0, 0, 0, 0.48);
-  -webkit-box-shadow: -2px -1px 15px 2px rgba(0, 0, 0, 0.48);
-  -moz-box-shadow: -2px -1px 15px 2px rgba(0, 0, 0, 0.48);
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 .fav-card img {
   width: 100%;
   height: 70px;
+  border-radius: 5px 5px 0 0;
 }
 .fav-card p {
   font-size: 15px;
@@ -212,5 +241,8 @@ nav h4 {
     display: flex;
     align-items: center;
     flex-direction: column;
+  }
+  .menu-list {
+    width: 100%;
   }
 }
