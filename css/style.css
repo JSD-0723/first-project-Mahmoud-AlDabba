@@ -98,6 +98,7 @@ header h4 {
 .content-body {
   background-color: var(--bg_body);
   padding-top: 20px;
+  height: 100vh;
 }
 
 .content-container {
@@ -161,6 +162,7 @@ header h4 {
 }
 .no-topic {
   padding: 24px 0 36px;
+  color: var(--body-text);
 }
 .cards {
   display: grid;
